@@ -1,0 +1,4 @@
+interface:
+  display_name: "钉钉与产品工作流"
+  short_description: "按需整理钉钉沟通，一体完成需求、PRD、原型、流程和验收，包含本地运行工具"
+  default_prompt: "用 $dingtalk-pm 处理这项产品工作，按需读取钉钉沟通并完成对应文档或原型。"

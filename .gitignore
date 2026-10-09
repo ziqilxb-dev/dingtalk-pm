@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+.dingtalk-pm/
+.pm-workflow/
+.handoff/
+.DS_Store
