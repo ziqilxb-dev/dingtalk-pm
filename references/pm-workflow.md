@@ -7,7 +7,7 @@ Turn product requirements into reviewable artifacts across business domains. Pre
 1. Check the requested project's `.agents/workflows/` and `.pm-workflow/installed.json`. Read only the workflow needed below. Existing files alone do not prove that required helpers are present.
 2. If the project has not been initialized or required helpers are missing, run the unified skill's `scripts/initialize.py --project <project-directory>` with Python 3.9+. The shell wrapper `scripts/init.sh` uses the current directory.
 3. Updates preserve local customizations and place incoming alternatives in `.pm-workflow/updates/`. Report pending merges. Read project-specific overrides in `.agents/workflows/local-overrides.md` when present.
-4. Initialization does not install browser dependencies or a background service. Follow `references/runtime.md` for environment checking and explicit setup when screenshots or local saving are needed.
+4. Initialization does not install browser dependencies or a background service. Follow [runtime.md](runtime.md) for environment checking and explicit setup when screenshots or local saving are needed.
 
 | Task | Workflow installed in the project | Output |
 |---|---|---|
@@ -36,3 +36,9 @@ The installed PRD workflow links to `pm-artifacts.md` for the shared editor, pre
 ## Customization
 
 Edit the skill's `assets/workflows/` or shared components only when updating the reusable skill itself. Keep project preferences in `.agents/workflows/local-overrides.md`; upgrades leave this file untouched. Local runtime configuration contains credentials and must not be published.
+
+## Review, changes, and handoff
+
+Before editing an existing requirement, read its current PRD and confirmed decisions alongside new evidence. Record the original rule, new decision, source, effective scope, proposed change and unresolved question. Retain valid rules and exception branches; do not treat brevity as grounds to remove them. Apply only supported changes and synchronize affected prototypes, flows, acceptance expectations and metric definitions. Preserve historical execution results separately.
+
+Use [PM handoff](pm-handoff.md) for source evidence and platform writes. Persist a project handoff only when continuing or transferring work; include current stage, artifact versions/paths, confirmed decisions, remaining gaps and next action. Generated plans are not implementation or release completion.

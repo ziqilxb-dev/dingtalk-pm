@@ -7,8 +7,8 @@
 `dws chat +conversation-list --limit 100 --format json`返回名字和openConversationId。与用户目标唯一匹配；hasMore且未找到时按help续页，不先全读消息。v1.0.63的 `chat +chat-messages --conversation-id <id>`已验证可以读取私聊双方。首次及升级后检查help，不把人名当群名或只按对方发送人筛选。
 
 ```bash
-python3 <skill>/scripts/collect.py --cli <dws> --conversation <verified-id> --output-root <project>/.dingtalk-pm/runs
-python3 <skill>/scripts/collect.py --cli <dws> --conversation <verified-id> --start '2026-10-09T00:00:00+08:00' --end '2026-10-10T00:00:00+08:00' --pages 5 --output-root <project>/.dingtalk-pm/runs
+python3 <skill>/scripts/collect.py --cli <dws> --conversation <verified-id> --output-root <project>/.work-assistant/runs/dingtalk
+python3 <skill>/scripts/collect.py --cli <dws> --conversation <verified-id> --start '2026-10-09T00:00:00+08:00' --end '2026-10-10T00:00:00+08:00' --pages 5 --output-root <project>/.work-assistant/runs/dingtalk
 ```
 
 默认最近30条；明确起始时间时按时间正序，有限页数。每次独立私有目录内保留raw.json，evidence.json含去重消息和缺口。屏幕只输出数量及路径。脚本不做语义决定、下载附件、操作客户端、发消息、改文档或调度。

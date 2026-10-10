@@ -19,8 +19,8 @@ def install(dest):
     for name in INCLUDE:
         if not (ROOT/name).exists():raise ValueError('Incomplete package: '+name)
     dest.parent.mkdir(parents=True,exist_ok=True)
-    with tempfile.TemporaryDirectory(prefix='.dingtalk-pm-install-',dir=dest.parent) as temp:
-        stage=Path(temp)/'dingtalk-pm';stage.mkdir()
+    with tempfile.TemporaryDirectory(prefix='.pm-work-assistant-install-',dir=dest.parent) as temp:
+        stage=Path(temp)/'pm-work-assistant';stage.mkdir()
         for name in INCLUDE:
             source=ROOT/name;target=stage/name
             if source.is_dir():shutil.copytree(source,target,ignore=shutil.ignore_patterns('__pycache__','*.pyc','.DS_Store'))

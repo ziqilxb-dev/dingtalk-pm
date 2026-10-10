@@ -2,7 +2,7 @@
 
 ## 移交
 
-collect.py只整理证据，当前agent根据原文生成语义信息卡。需要持久化移交时用pm-handoff.json：
+聊天由collect.py整理证据；听记保留DWS原始响应及分页证据（见 [听记读取](minutes.md)）。当前agent根据原文生成语义信息卡。需要持久化移交时用pm-handoff.json：
 ```json
 {
   "source_packet":"evidence.json",
@@ -23,6 +23,12 @@ collect.py只整理证据，当前agent根据原文生成语义信息卡。需�
 ready_for_prd需明确决定、适用条件及充分上下文，截图或单独“是”不足以置true。所有正文读到也可能无决策。建议、假设、转述不能自动升格为需求。
 
 仅总结时在聊天交付；需要本地产物时用HTML展示结论/依据/缺口/文档影响，用户指定格式优先。包内 [PM工作流](pm-workflow.md) 负责需求、PRD、原型、流程和验收，不复制它的模板。不要在公开产物嵌入本机原始聊天或凭据。
+
+听记依据在evidence中使用 `source_type: "minutes"`、`task_uuid`、`artifact`、`paragraph_id`、`start_ms`、`end_ms` 和 `url`，不伪造message_id。仅有AI摘要时标记artifact=summary；未核对的摘要和自动提取待办不能直接升级为已确认决定或实际派发任务。多来源移交可增加source_packets数组，逐项保留覆盖范围。
+
+## 钉钉文档读取
+
+根据用户链接提取真实节点ID，或按主题搜索定位。先检查本机 `dws doc read --help` 与 `dws doc block list --help`，读取正文；结构、图片或表格有缺口时按需补读。仅阅读不触发写回。
 
 ## 钉钉文档局部写回
 

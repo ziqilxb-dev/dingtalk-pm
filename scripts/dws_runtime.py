@@ -33,6 +33,7 @@ def asset_name(key):
 
 
 def cache_root():
+    # Legacy cache/env name retained to reuse verified binaries after the skill rename.
     return Path(os.environ.get('DINGTALK_PM_CACHE', str(Path.home()/'.cache/dingtalk-pm')))
 
 
@@ -69,7 +70,7 @@ def checksums():
 
 def download(key, directory):
     name=asset_name(key); expected=checksums()[name]; path=Path(directory)/name
-    request=urllib.request.Request(BASE+'/'+name,headers={'User-Agent':'dingtalk-pm-setup'})
+    request=urllib.request.Request(BASE+'/'+name,headers={'User-Agent':'pm-work-assistant-setup'})
     digest=hashlib.sha256()
     with urllib.request.urlopen(request,timeout=60) as response, path.open('wb') as out:
         total=0

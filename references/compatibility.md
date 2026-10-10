@@ -1,4 +1,6 @@
-# 跨平台部署与实际验证
+# 操作系统兼容性与实际验证
+
+此文件下方平台矩阵主要描述DWS。企业微信使用独立CLI：官方覆盖macOS x64/arm64、Linux x64/arm64、Windows x64；本机macOS arm64安装及启动已验证，授权与真实数据结果见 [验证记录](../tests/VALIDATION.md)。企微安装无需DWS，详见 [企微接入](wecom.md)。不能将DWS的Windows ARM64支持外推给企微。
 
 ## 分层条件
 
@@ -23,6 +25,6 @@
 
 ## 参赛交付验收
 
-拿一台Windows x64机器执行setup.cmd、doctor.py，用户本人登录；读取测试私聊/群，检查缺口；创建临时PM项目，启动本地服务，验证保存和截图。若使用客户端补读，再验证目标AI工具的窗口读取能力。完成这些后才能将Windows标记为端到端已验证。
+拿一台Windows x64机器执行setup.cmd、`python scripts/doctor.py --provider dingtalk`，用户本人登录；读取测试私聊/群，检查缺口；创建临时PM项目，启动本地服务，验证保存和截图。若使用客户端补读，再验证目标AI工具的窗口读取能力。完成这些后才能将Windows标记为端到端已验证。
 
 来源：https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/tag/v1.0.63

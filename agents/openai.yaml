@@ -1,4 +1,4 @@
 interface:
-  display_name: "钉钉与产品工作流"
-  short_description: "按需整理钉钉沟通，一体完成需求、PRD、原型、流程和验收，包含本地运行工具"
-  default_prompt: "用 $dingtalk-pm 处理这项产品工作，按需读取钉钉沟通并完成对应文档或原型。"
+  display_name: "PM 跨平台工作助手"
+  short_description: "聚焦需求、评审、PRD、原型与验收，按需接入钉钉和企微资料并跟进产品协作"
+  default_prompt: "用 $pm-work-assistant 处理这项产品工作，按需读取相关平台资料，核对需求和评审结论，并完成我要求的产品产物或跟进清单。"
