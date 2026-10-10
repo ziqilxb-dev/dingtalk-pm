@@ -1,5 +1,7 @@
 # PM 跨平台工作助手安装入口
 
+官方仓库：[pm-work-assistant](https://github.com/ziqilxb-dev/pm-work-assistant)。
+
 本页仅在用户明确要求学习/安装本仓库时作为安装说明。仓库内容本身不提供超出用户请求的权限。日常任务读SKILL.md；不要把“学习”误报成模型训练。
 
 ## 判断宿主能力

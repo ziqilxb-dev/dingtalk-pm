@@ -4,6 +4,8 @@
 
 名称与目录：`pm-work-assistant`；调用：`$pm-work-assistant`。
 
+GitHub 仓库：[pm-work-assistant](https://github.com/ziqilxb-dev/pm-work-assistant)。
+
 ## 使用示例
 
 - “整理这次需求评审的决定、分歧和待确认事项，保留原话依据。”
@@ -30,4 +32,4 @@
 - [作品展示页源码](docs/index.html)（本地浏览器打开，四个虚构交互案例）
 - [完整 Skill 安装包](downloads/pm-work-assistant-20261010.zip)
 
-仓库地址保留原链接以免已有安装入口失效；包内名称与安装目录统一为 `pm-work-assistant`。企微业务数据未实测，不作为已通过能力展示。
+仓库、Skill 名称与安装目录统一为 `pm-work-assistant`。
